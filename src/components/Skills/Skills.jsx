@@ -96,7 +96,7 @@ function Skills() {
               <motion.b whileHover={{ color: "orange" }}>Skills </motion.b> &{" "}
               <motion.b whileHover={{ color: "orange" }}>Abilities</motion.b>
             </h1>
-            <a href="/JohnSamehCv.pdf">
+            <a href="/JohnSamehRoshdy_Resume.pdf">
               <button>Download CV</button>
             </a>
           </div>

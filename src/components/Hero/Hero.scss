@@ -30,7 +30,9 @@
       h1 {
         font-size: 80px;
       }
-
+      a {
+        z-index: 5;
+      }
       .buttons {
         display: flex;
         gap: 20px;
