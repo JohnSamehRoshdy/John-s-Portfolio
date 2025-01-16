@@ -1,0 +1,180 @@
+@import "../../App.scss";
+.hero {
+  height: calc(100vh);
+  overflow: hidden;
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  position: relative;
+  padding: 120px;
+  padding-top: 200px;
+
+  .wrapper {
+    max-width: 1366px;
+    height: 100%;
+    margin: auto;
+    margin-left: 20px;
+
+    .textContainer {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+
+      h2 {
+        font-size: 40px;
+        color: rebeccapurple;
+        letter-spacing: 10px;
+      }
+
+      h1 {
+        font-size: 80px;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 20px;
+
+        button {
+          padding: 20px;
+          border: 1px solid white;
+          border-radius: 10px;
+          background-color: transparent;
+          color: white;
+          cursor: pointer;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+          }
+        }
+      }
+
+      img {
+        width: 50px;
+      }
+    }
+  }
+
+  .imageContainer {
+    height: 80%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 200px;
+    padding-top: 120px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .slidingTextContainer {
+    position: absolute;
+    font-size: 50vh;
+    bottom: -120px;
+    white-space: nowrap;
+    color: #ffffff0c;
+    width: 50%;
+    font-weight: bold;
+    z-index: 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px;
+
+    .wrapper {
+      margin-left: 0;
+
+      .textContainer {
+        width: 100%;
+        text-align: center;
+        gap: 15px; // Reduced gap for text elements
+
+        h2 {
+          font-size: 28px;
+          margin-bottom: 10px; // Adjust vertical spacing
+        }
+
+        h1 {
+          font-size: 32px;
+          margin-bottom: 20px; // Adjust vertical spacing
+        }
+
+        .buttons {
+          flex-direction: row; // Buttons side by side
+          gap: 10px;
+          justify-content: center;
+
+          button {
+            padding: 15px;
+            width: 100%; // Full width buttons
+          }
+        }
+
+        img {
+          display: none; // Hide scroll button on mobile
+        }
+      }
+    }
+
+    .imageContainer {
+      display: none;
+      // width: 100%; // Full width for mobile
+      // position: relative;
+      // margin: auto;
+      // padding-top: 0;
+
+      // img {
+      //   width: 70%; // Reduce width for mobile
+      //   margin: auto;
+      //   display: block; // Center the image horizontally
+      // }
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    padding: 40px; // Adjust padding for iPads
+
+    .wrapper {
+      margin-left: 0;
+
+      .textContainer {
+        width: 100%;
+        text-align: center;
+        gap: 20px; // Adjust gap for iPads
+
+        h2 {
+          font-size: 45px; // Adjust font size for iPads
+        }
+
+        h1 {
+          font-size: 60px; // Adjust font size for iPads
+        }
+
+        .buttons {
+          flex-direction: row; // Buttons side by side
+          gap: 15px;
+
+          button {
+            padding: 18px; // Slightly larger buttons for iPads
+            width: auto; // Auto width for buttons
+          }
+        }
+      }
+
+      .imageContainer {
+        width: 80%; // Adjust width for iPads
+        position: relative;
+        margin: auto;
+
+        img {
+          width: 80%; // Adjust image size for iPads
+          margin: auto;
+          display: block;
+        }
+      }
+    }
+  }
+}

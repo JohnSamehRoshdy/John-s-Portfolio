@@ -1,0 +1,173 @@
+.skills {
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 100px;
+
+  .titleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+      img {
+        width: 250px;
+        height: 90px;
+        border-radius: 50px;
+        object-fit: cover;
+      }
+
+      h1 {
+        font-size: 70px;
+        font-weight: 100;
+      }
+
+      button {
+        background-color: orange;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .listContainer {
+    display: flex;
+    gap: 40px; /* Increased gap between the cards */
+    overflow: hidden;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 20px;
+    height: 270px;
+
+    @media (max-width: 768px) {
+      flex-wrap: wrap; /* Allow wrapping on smaller screens */
+      justify-content: space-between; /* Distribute the items evenly */
+      height: auto; /* Adjust height to fit content */
+    }
+  }
+
+  .box {
+    flex: 0 1 calc(25% - 20px);
+    padding: 30px; /* Increased padding inside each card */
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px; /* Vertical gap between image and text */
+    height: 200px;
+    justify-content: center;
+
+    img {
+      width: 120px;
+      height: auto;
+    }
+
+    h2 {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      flex: 0 1 48%; /* Adjust flex for 2 items per row on mobile */
+      margin-bottom: 20px; /* Add spacing between rows */
+
+      img {
+        width: 80px; /* Adjust image size for mobile */
+      }
+
+      h2 {
+        font-size: 18px; /* Smaller font size for mobile */
+      }
+    }
+  }
+
+  .pagination {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px; /* More padding under the buttons */
+    padding-bottom: 50px;
+
+    button {
+      padding: 10px;
+      background-color: orange;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+
+      &:disabled {
+        background-color: gray;
+        cursor: not-allowed;
+      }
+    }
+
+    @media (max-width: 768px) {
+      display: none; /* Hide pagination on smaller screens */
+    }
+  }
+
+  ///////////////////
+  @media (max-width: 768px) {
+    .container {
+      height: 1000px;
+    }
+    .titleContainer {
+      display: flex;
+      flex-direction: column; /* Change to column layout for mobile */
+      align-items: center; /* Center title and button */
+      gap: 20px; /* Add space between the title and the button */
+
+      .title {
+        justify-content: center; /* Center the text */
+        gap: 10px; /* Gap between the words */
+        flex-direction: row; /* Arrange words side by side */
+
+        img {
+          display: none;
+        }
+
+        h1 {
+          font-size: 36px; /* Smaller title for mobile */
+        }
+      }
+
+      button {
+        margin-top: 20px; /* Add some space between title and button */
+      }
+    }
+
+    .listContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px; /* Space between the boxes */
+
+      .box {
+        flex: 0 1 48%; /* Ensures two boxes in a row */
+        img {
+          width: 80px; /* Adjust image size for mobile */
+        }
+
+        h2 {
+          font-size: 18px; /* Smaller font size for mobile */
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .box {
+      flex: 0 1 100%; /* Single column layout for very small screens */
+    }
+  }
+}

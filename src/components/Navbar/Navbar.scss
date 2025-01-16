@@ -1,0 +1,82 @@
+@import "../../App.scss";
+
+.navbar {
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Keeps it on top of other content */
+  background-color: #0d0c1c; /* Optional */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional */
+  .wrapper {
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px;
+
+    .logo {
+      width: 220px;
+      height: 100px;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .tabs {
+      display: flex;
+      gap: 40px; // Increased gap
+
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #ffffff;
+        padding: 10px 15px; // Added padding for a better hover effect
+        transition: color 0.3s, background-color 0.3s; // Smooth transition for both color and background
+
+        &:hover {
+          color: #007bff;
+          background-color: rgba(0, 0, 0, 0.1); // Added background hover effect
+          border-radius: 5px; // Optional: for rounded corners
+        }
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .burger-icon {
+      display: none;
+      cursor: pointer;
+
+      img {
+        width: 35px;
+        height: 35px;
+      }
+
+      @include mobile {
+        display: block;
+      }
+    }
+
+    .social {
+      display: flex;
+      gap: 20px;
+
+      img {
+        width: 35px;
+        height: 35px;
+      }
+
+      @include mobile {
+        justify-content: flex-end;
+        width: 100%;
+      }
+    }
+  }
+}
